@@ -16,7 +16,6 @@ function App() {
   const handleAvengersClick = () => {
     console.log('avengers clicked')
     
-
   }
 
   const handleSearchClick = () => {
