@@ -1,10 +1,9 @@
-const GoBack = (props) => {
+import { Link } from 'react-router-dom';
+
+const GoBack = () => {
     
-    console.log('Im in my button component ', props);
-
-    return (
-        <button onClick={props.goBackClick}>Go Back</button>
-
+    return ( 
+        <Link to="/">Go Back!</Link>
     )
 }
 
