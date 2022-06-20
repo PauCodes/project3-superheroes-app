@@ -1,20 +1,17 @@
+import './Avengers.css';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import AvengersDisplayPhotos from './AvengersDisplayPhotos';
 import GoBack from './GoBack';
 
-const Avengers = (props) => {
-
-    // console.log('component has rendered!');
+const Avengers = () => {
 
     //call useState hook to hold the array back from my api - destructure variable and function 
     const [charData, setCharData] = useState(null); //expecting an array of objects, so I initialize with null bec it doesn't exist until user selection
-    //state to represent changes based on user's selection from dropdown
-    const [avengersSelection, setAvengersSelection] = useState(null);
     //state to track the changing value of the select dropdown
-    const [selectValue, setSelectValue] = useState('');
+    // const [selectValue, setSelectValue] = useState('');
      // Character ID -> coming from select
-    const [charId, setCharId] = useState(null);
+    const [charId, setCharId] = useState('');
 
     
   
@@ -43,30 +40,29 @@ const Avengers = (props) => {
 
     //pass this function to form to update state
     //it tahes two arguments: default and selection in anonymous function, so it only runs when called
-    const selectAvengersSelection = (event, selection) => {
-      event.preventDefault();
-      console.log('Pick your advenger', selection);
+    // const selectAvengersSelection = (event, selection) => {
+    //   event.preventDefault();
+    //   console.log('Pick your advenger', selection);
 
-      // call state updater funtion and use the selected value to update the avengersSelection state
-      // setAvengersSelection(selection);
+    //   // call state updater funtion and use the selected value to update the avengersSelection state
+    //   // setAvengersSelection(selection);
 
-    }
+    // }
 
     //tracking change event on select el and form submission
     const handleChange = (event) => {
       console.log(event.target.value)
       const value = event.target.value;
-      // setSelectValue(value);
       setCharId(value);
     }
 
     return (
-        <div>
+        <div className='avengersPage' >
           <h1>Avengers</h1>
           <GoBack />
-          {/* <form onSubmit={(event) => {selectAvengersSelection(event, selectValue)}}> */}
+          <form>
             <label>Choose your superhero</label>
-            <select onChange={handleChange} value={selectValue}>
+            <select onChange={handleChange} value={charId}>
               <option value="" default disabled>Your favourite Avengers is:</option>
               <option value="1009368">Iron Man</option>
               <option value="1009220">Captain America</option>
@@ -76,8 +72,7 @@ const Avengers = (props) => {
               <option value="1010911">Black Widow</option>
               <option value="1011130">Black Panther</option>
             </select>
-            {/* <button>Show me!!</button>
-          </form> */}
+          </form> 
           {
             charData && <AvengersDisplayPhotos details={charData} />
           }          

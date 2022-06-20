@@ -2,14 +2,14 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import GoBack from './GoBack';
 
-const Search = (props) => {
+const Search = () => {
 
     //call useState hook to hold the array back from my api - destructure variable and function 
     const [heroData, setHeroData] = useState([]); //expecting an array of objects, so I initialize with empty one
     //character name coming from user input
     const [userInput, setUserInput] = useState('');
 
-    const [valueOnChange, setValueOnChange] = useState('');
+    // const [valueOnChange, setValueOnChange] = useState('');
     
   
     //once the component has renders, I will run a side effect: fetching data

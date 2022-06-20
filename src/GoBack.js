@@ -1,9 +1,10 @@
+import './Goback.css'
 import { Link } from 'react-router-dom';
 
 const GoBack = () => {
     
     return ( 
-        <Link to="/">Go Back!</Link>
+        <Link className='gobackbtn' to="/">Go Back!</Link>
     )
 }
 
