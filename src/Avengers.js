@@ -22,7 +22,7 @@ const Avengers = () => {
       if(charId){
         //api call within a useEffect to hold my data
       axios({
-        baseURL: 'http://gateway.marvel.com/',
+        baseURL: 'https://gateway.marvel.com/',
         url: `v1/public/characters/${charId}`,
         method: 'GET',
         params: {
