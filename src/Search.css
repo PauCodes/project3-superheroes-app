@@ -1,9 +1,8 @@
 .searchContainer {
     position: relative;
     height: 100vh;
-    border: 2px solid red;
+    background-image: url('../src/assets/sectionBg.png');
 }
-
 
 
 .characterSearch {
@@ -12,4 +11,43 @@
     align-items: center;
     align-content: center;
     gap: 20px;
+}
+
+.characterFinder {
+    width: 600px;
+    padding: 25px 40px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    background-color: #FFD400;
+    border: 5px solid black;
+    position: absolute;
+    top: 115px;
+    font-weight: 900;
+}
+
+.characterFinder:focus {
+    outline: none;
+}
+
+.searchTitle {
+    color: #FFD400;
+    text-shadow: 5px 5px black;
+    text-transform: uppercase;
+
+}
+
+.cardsCatalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px auto;
+    width: 80%;
+    align-content: center;
+    align-items: center;
+    margin-top: 115px;
+}
+
+.searchCards {
+    flex-basis: calc((100% / 3) - 20px);
+    text-align: center;
 }

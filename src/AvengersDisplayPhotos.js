@@ -1,4 +1,4 @@
-import './AvengersInfo.css'
+
 
 const AvengersDisplayPhotos = (props) => { 
     const name = props.details[0].name;
@@ -8,11 +8,11 @@ const AvengersDisplayPhotos = (props) => {
    
     return (
         <section className='avengersSection'>
-            <div className="avengersCards">
-                <h2>{name}</h2>
-                <p>{description}</p>
-                <div className='avengersImgContainer'>
-                    <img className='avengersImg' src={image} alt={`pic of ${props.details[0].name}`} />
+            <div className='cards avengersCard'>
+                <h2 className='title' >{name}</h2>
+                <p className='details'>{description}</p>
+                <div className='imgContainer'>
+                    <img className='characterImg' src={image} alt={`pic of ${props.details[0].name}`} />
                 </div>
             </div>
         </section>

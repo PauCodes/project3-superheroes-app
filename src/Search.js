@@ -10,10 +10,7 @@ const Search = () => {
     //character name coming from user input
     const [userInput, setUserInput] = useState('');
 
-    // const [valueOnChange, setValueOnChange] = useState('');
-    
   
-    //once the component has renders, I will run a side effect: fetching data
   
     useEffect(() => {
       //api call within a useEffect to hold my data
@@ -27,11 +24,10 @@ const Search = () => {
           apikey: 'f6a569770dbc42c8e49153f86a614843',
           hash: '2b386c7f05318a6e66fed6f3416c4b2d',
           nameStartsWith: `${userInput}`,
-          limit: 20
+          limit: 3
         }
       }).then((apiData) => {
   
-        //store data returned from api in state
         setHeroData(apiData.data.data.results)
       })
       }
@@ -47,11 +43,12 @@ const Search = () => {
 
     return (
         <div className='searchContainer' >
-          <h1>Search</h1>
+          <h1 className='searchTitle' >Search</h1>
           <div className='characterSearch' >
           {/* <form action='submit' onSubmit={handleSubmit}> */}
-            <label>Looking for the coolest Super Hero?</label>
+            <label className='sr-only' >Looking for the coolest Super Hero?</label>
             <input
+            placeholder='The coolest superhero is...'
             className='characterFinder'
             type="text"
             onChange={(handleInputChange)}
@@ -61,16 +58,17 @@ const Search = () => {
           {/* </form> */}
           {
             userInput && (
-              <ul>
+              <ul className='cardsCatalogue'>
             {
               heroData.map((hero) => {
                 const image = hero.thumbnail.path + '.' + hero.thumbnail.extension;
                 return (
-                  <li key={hero.id}>
-                    <h2>{hero.name}</h2>
-                    <p>{hero.description}</p>
-                    <img src={image} alt={`pic of ${hero.name}`}></img>
-                    
+                  <li className='cards searchCards' key={hero.id}>
+                    <h2 className='title' >{hero.name}</h2>
+                    <p className='details' >{hero.description}</p>
+                    <div className='imgContainer'>
+                      <img className='characterImg' src={image} alt={`pic of ${hero.name}`}></img>  
+                    </div>
                   </li>
                 )
               })

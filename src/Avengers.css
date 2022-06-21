@@ -1,7 +1,9 @@
 .avengersPage {
     height: 100vh;
     position: relative;
-    background-image: url('../src/assets/sectionBg.png');
+    background-image: url('../src/assets/avengersBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -13,14 +15,17 @@
     gap: 20px;
 }
 
-label {
-    font-size: 20px;
-}
-
 
 .avengersSelect {
-    width: 400px;
-    padding: 5px;
+    width: 600px;
+    padding: 25px 40px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size: 20px;
+    font-size: 30px;
+    background-color: tomato;
+    border: 5px solid black;
+    font-weight: 900;
+}
+
+.avengersCard {
+    margin: 45px auto;
 }
