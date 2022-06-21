@@ -19,7 +19,7 @@ const Search = () => {
       //api call within a useEffect to hold my data
       if(userInput) {
          axios({
-        baseURL: 'http://gateway.marvel.com/',
+        baseURL: 'https://gateway.marvel.com/',
         url: 'v1/public/characters',
         method: 'GET',
         params: {
