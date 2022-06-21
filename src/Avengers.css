@@ -1,5 +1,26 @@
 .avengersPage {
     height: 100vh;
-    border: 2px solid red;
     position: relative;
+    background-image: url('../src/assets/sectionBg.png');
+}
+
+
+.avengersForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+
+.avengersSelect {
+    width: 400px;
+    padding: 5px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
 }

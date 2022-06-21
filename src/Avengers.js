@@ -60,9 +60,9 @@ const Avengers = () => {
         <div className='avengersPage' >
           <h1>Avengers</h1>
           <GoBack />
-          <form>
+          <form className='avengersForm' >
             <label>Choose your superhero</label>
-            <select onChange={handleChange} value={charId}>
+            <select className='avengersSelect' onChange={handleChange} value={charId}>
               <option value="" default disabled>Your favourite Avengers is:</option>
               <option value="1009368">Iron Man</option>
               <option value="1009220">Captain America</option>

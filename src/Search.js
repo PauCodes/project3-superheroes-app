@@ -1,3 +1,4 @@
+import './Search.css';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import GoBack from './GoBack';
@@ -44,17 +45,14 @@ const Search = () => {
       setUserInput(value);
     }
 
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      // setUserInput(valueOnChange);
-    }
-
     return (
-        <div>
+        <div className='searchContainer' >
           <h1>Search</h1>
+          <div className='characterSearch' >
           {/* <form action='submit' onSubmit={handleSubmit}> */}
             <label>Looking for the coolest Super Hero?</label>
             <input
+            className='characterFinder'
             type="text"
             onChange={(handleInputChange)}
             value={userInput}
@@ -82,6 +80,7 @@ const Search = () => {
           }
           
           <GoBack />
+          </div>
         </div>
     )
 }

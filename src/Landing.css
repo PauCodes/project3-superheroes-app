@@ -1,21 +1,60 @@
-header {
-    background-color: darkblue;
+.landing {
+    background-color: black;
     height: 100vh;
+    border: 15px solid #FFD400;
+    position: relative;
 }
 
-ul {
+.hulkBg {
+    background: url('../src/assets/Avengers-Hulk-PNG.png');
+    background-size: 360px 325px;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 360px;
+    height: 325px;
+    top: 0;
+    right: -22px;
+    pointer-events: none;
+}
+
+.wolverineBg {
+    background: url('../src/assets/wolverine.png');
+    background-size: 360px 325px;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 360px;
+    height: 325px;
+    bottom: 0;
+    left: -55px;
+    pointer-events: none;
+}
+
+.mainHeader {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 30px;
+    gap: 50px;
     height: 100vh;
 }
 
 a {
     text-decoration: none;
-    font-size: 40px;
-    /* color: yellow; */
-    border-bottom: 4px solid red;
+}
+
+.mainBtn {
+    cursor: pointer;
+    background: yellow;
+    border: none;
+    width: 315px;
+    padding: 25px 0;
+    color: tomato;
+    border: 3px solid tomato;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    -webkit-box-shadow: 5px 5px 0px 0px #FFDD3C, 10px 10px 0px 0px #FFEA61, 15px 15px 0px 0px #FFF192, 20px 20px 0px 0px #FFFFB7;
+    box-shadow: 5px 5px 0px 0px #FFDD3C, 10px 10px 0px 0px #FFEA61, 15px 15px 0px 0px #FFF192, 20px 20px 0px 0px #FFFFB7;
+    background: #FFD400;
 }

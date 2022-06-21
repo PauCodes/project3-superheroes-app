@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
     return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to='/avengers'>Avengers</Link>
-                    </li>
-                    <li>
-                        <Link to='/search'>Search</Link>
-                    </li>
-                </ul>
-            </nav>      
+        <header className='landing'>
+            <div className="hulkBg"></div>
+            <div className="wolverineBg"></div>
+            <div className='mainHeader'>
+                <Link className='mainBtn' to='/avengers'>Avengers Characters</Link>
+                <Link className='mainBtn' to='/search'>Search Characters</Link>
+            </div>   
         </header>
     )
 }
