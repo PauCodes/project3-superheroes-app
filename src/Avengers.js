@@ -7,20 +7,15 @@ import GoBack from './GoBack';
 const Avengers = () => {
 
     //call useState hook to hold the array back from my api - destructure variable and function 
-    const [charData, setCharData] = useState(null); //expecting an array of objects, so I initialize with null bec it doesn't exist until user selection
-    //state to track the changing value of the select dropdown
-    // const [selectValue, setSelectValue] = useState('');
+    const [charData, setCharData] = useState(null); //expecting an array of objects, so I initialize with null because it doesn't exist until user selection
      // Character ID -> coming from select
     const [charId, setCharId] = useState('');
 
-    
-  
-    //once the component has renders, I will run a side effect: fetching data
   
     useEffect(() => {
 
       if(charId){
-        //api call within a useEffect to hold my data
+    
       axios({
         baseURL: 'https://gateway.marvel.com/',
         url: `v1/public/characters/${charId}`,
@@ -31,23 +26,12 @@ const Avengers = () => {
           hash: '2b386c7f05318a6e66fed6f3416c4b2d',
         }
       }).then((apiData) => {
-        console.log(apiData.data.data.results)
-        //store data returned from api in state
+    
         setCharData(apiData.data.data.results)
       })
       }      
     }, [charId])
 
-    //pass this function to form to update state
-    //it tahes two arguments: default and selection in anonymous function, so it only runs when called
-    // const selectAvengersSelection = (event, selection) => {
-    //   event.preventDefault();
-    //   console.log('Pick your advenger', selection);
-
-    //   // call state updater funtion and use the selected value to update the avengersSelection state
-    //   // setAvengersSelection(selection);
-
-    // }
 
     //tracking change event on select el and form submission
     const handleChange = (event) => {

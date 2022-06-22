@@ -1,5 +1,4 @@
 
-
 const AvengersDisplayPhotos = (props) => { 
     const name = props.details[0].name;
     const description = props.details[0].description;

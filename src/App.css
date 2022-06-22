@@ -10,6 +10,16 @@ body {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
+html,
+body,
+#root,
+.App,
+main,
+.avengersPage {
+  overflow: auto;
+  height: 100%;
+}
+
 article,
 aside,
 footer,
@@ -26,6 +36,19 @@ h1 {
   color: tomato;
   text-shadow: 5px 5px black;
   text-transform: uppercase;
+}
+
+@media (max-width: 499px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2em;
+    padding-top: 60px;
+  }
 }
 
 figcaption,
@@ -285,8 +308,14 @@ label {
 }
 
 h2 {
-  font-size: 1.5em;
-  margin-bottom: 0;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 414px) {
+  h2 {
+    font-size: 30px;
+  }
 }
 
 .cards {
@@ -297,30 +326,45 @@ h2 {
   background-color: darkslategray;
   border: 10px solid cornsilk;
   border-radius: 10px;
-  display: flex;
   flex-direction: column;
-  width: 380px;
-  height: 430px;
+  width: 60%;
+  height: 75%;
   margin: 10px;
   gap: 5px;
-
 }
+
+@media (max-width: 768px) {
+  .cards {
+    width: 80%;
+  }
+}
+
 
 .title {
   color: cornsilk;
 }
 
 .details {
-  margin: 10px 50px;
   width: 80%;
   text-align: justify;
   color: cornsilk;
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+@media (max-width: 414px) {
+  .details {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 .imgContainer {
-  width: 35%;
+  width: 80%;
   border: 5px solid cornsilk;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 
 .characterImg {

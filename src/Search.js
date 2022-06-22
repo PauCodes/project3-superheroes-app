@@ -13,7 +13,7 @@ const Search = () => {
   
   
     useEffect(() => {
-      //api call within a useEffect to hold my data
+  
       if(userInput) {
          axios({
         baseURL: 'https://gateway.marvel.com/',
@@ -24,7 +24,7 @@ const Search = () => {
           apikey: 'f6a569770dbc42c8e49153f86a614843',
           hash: '2b386c7f05318a6e66fed6f3416c4b2d',
           nameStartsWith: `${userInput}`,
-          limit: 3
+          limit: 15
         }
       }).then((apiData) => {
   
@@ -45,7 +45,6 @@ const Search = () => {
         <div className='searchContainer' >
           <h1 className='searchTitle' >Search</h1>
           <div className='characterSearch' >
-          {/* <form action='submit' onSubmit={handleSubmit}> */}
             <label className='sr-only' >Looking for the coolest Super Hero?</label>
             <input
             placeholder='The coolest superhero is...'
@@ -54,8 +53,7 @@ const Search = () => {
             onChange={(handleInputChange)}
             value={userInput}
             />
-            {/* <button type="submit">submit</button> */}
-          {/* </form> */}
+    
           {
             userInput && (
               <ul className='cardsCatalogue'>
@@ -65,7 +63,7 @@ const Search = () => {
                 return (
                   <li className='cards searchCards' key={hero.id}>
                     <h2 className='title' >{hero.name}</h2>
-                    <p className='details' >{hero.description}</p>
+                    <p className='details' >{hero.description}</p>   
                     <div className='imgContainer'>
                       <img className='characterImg' src={image} alt={`pic of ${hero.name}`}></img>  
                     </div>
