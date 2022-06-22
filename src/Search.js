@@ -4,14 +4,9 @@ import { useEffect, useState } from "react";
 import GoBack from './GoBack';
 
 const Search = () => {
-
-    //call useState hook to hold the array back from my api - destructure variable and function 
-    const [heroData, setHeroData] = useState([]); //expecting an array of objects, so I initialize with empty one
-    //character name coming from user input
+    const [heroData, setHeroData] = useState([]); 
     const [userInput, setUserInput] = useState('');
 
-  
-  
     useEffect(() => {
   
       if(userInput) {
@@ -34,8 +29,7 @@ const Search = () => {
      
     }, [userInput])
 
-    //this event will handle the user typing in the input
-  //when the user types in the input box: 
+    
     const handleInputChange = (event) => {
       const value = event.target.value;       
       setUserInput(value);

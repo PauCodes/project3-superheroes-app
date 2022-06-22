@@ -6,9 +6,7 @@ import GoBack from './GoBack';
 
 const Avengers = () => {
 
-    //call useState hook to hold the array back from my api - destructure variable and function 
-    const [charData, setCharData] = useState(null); //expecting an array of objects, so I initialize with null because it doesn't exist until user selection
-     // Character ID -> coming from select
+    const [charData, setCharData] = useState(null); 
     const [charId, setCharId] = useState('');
 
   
@@ -33,9 +31,8 @@ const Avengers = () => {
     }, [charId])
 
 
-    //tracking change event on select el and form submission
+   
     const handleChange = (event) => {
-      console.log(event.target.value)
       const value = event.target.value;
       setCharId(value);
     }
