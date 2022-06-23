@@ -1,4 +1,4 @@
-.avengersPage {
+/* .avengersPage {
     position: relative;
     background-image: url('../src/assets/avengersBg.png');
     background-repeat: no-repeat;
@@ -34,6 +34,7 @@
     }
 }
 
+
 @media (max-width:499px) {
 
     .avengersSelect {
@@ -52,4 +53,4 @@
 
 .avengersCard {
     margin: 45px auto;
-}
+} */

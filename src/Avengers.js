@@ -1,4 +1,5 @@
-import './Avengers.css';
+import './App.css';
+// import './Avengers.css';
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import AvengersDisplayPhotos from './AvengersDisplayPhotos';

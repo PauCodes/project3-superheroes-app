@@ -1,4 +1,5 @@
-import './Goback.css';
+import './App.css';
+// import './Goback.css';
 import { Link } from 'react-router-dom';
 
 const GoBack = () => {
