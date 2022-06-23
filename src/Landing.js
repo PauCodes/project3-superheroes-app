@@ -1,5 +1,4 @@
 import './App.css';
-// import './Landing.css'
 import { Link } from 'react-router-dom'
 
 const Landing = () => {
